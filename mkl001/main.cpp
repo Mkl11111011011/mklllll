@@ -33,6 +33,9 @@ void menb(int x,int y)
     txLine(x,150+y,x-25,260+y); // пнога
     txCircle(x,y,25); // голова
 }
+
+
+
 void fon_pesh()
 {
       txSetColor (RGB(0,0,0),2);//fon
@@ -42,30 +45,52 @@ void fon_pesh()
     txSetFillColor (RGB(175,175,175));//fon
     txRectangle (0, 0, 800, 300);//fon
 }
+
+
+
+
 void sub(const char* subtitres)
 {
 txTextOut (10,550,subtitres);
 }
 
+
+
 int main()
     {
     txCreateWindow (800, 600);
     int running = 1;
-    int time = -251 ;
+    int time = -321 ;
     int x1 = 0;
     int x2 = 0;
     int y1 = 0;
     int y2 = 0;
     int x0 = 0;
+
+
     while (running < 10) {
      txSetColor (RGB(255,0,0),2);//fon
     txSetFillColor (RGB(0,0,0));//fon
     txRectangle (0, 0, 800, 600);//fon
     time = time + 1; // vremia
-    txSelectFont("Comic Sans MS", 40);
+
+
+
+    if (time >= -320 and time <= -251){
+        txSelectFont("Comic Sans MS", 110);
+         txTextOut (100,250,"'Fight in cave'");
+
+    }//nazvanie
+
+
+
     if (time >= -250 and time <= -200){
+        txSelectFont("Comic Sans MS", 40);
         txLine(100,280,670,280);
     }//zglazzred
+
+
+
     if (time >= -199 and time <= -150){
         txLine(90,300,270,200);
         txLine(270,200,500,190);
@@ -80,11 +105,17 @@ int main()
         txSetFillColor (RGB(0,0,0));
         txEllipse(370,195,390,340);
     }//otglazzred
+
+
+
     if (time >= -149 and time <= -100){
         txSetColor (RGB(255,200,0),2);
         txSetFillColor (RGB(0,0,0));
         txLine(100,280,670,280);
     }//zglazzyel
+
+
+
     if (time >= -99 and time <= -50){
         txSetColor (RGB(255,200,0),2);
         txSetFillColor (RGB(0,0,0));
@@ -101,6 +132,9 @@ int main()
         txSetFillColor (RGB(0,0,0));
         txEllipse(370,195,390,340);
     }//otglazzyel
+
+
+
     if (time >= -49 and time <= 100)
         {
             fon_pesh();
@@ -113,6 +147,10 @@ int main()
         x0 = x0 + 1;
         sub("intelligence_20_vs_lake_20");
         }//vs_vs
+
+
+
+
     if (time >= 101 and time <= 200){
             fon_pesh();
     txSetColor (RGB(255,0,0),2);
@@ -126,6 +164,10 @@ int main()
     x1 = x1 + 2;
     }//mech i chel
 
+
+
+
+
     if (time >= 201 and time <= 250)
         {
         txLine(360,100,360,600);
@@ -134,6 +176,9 @@ int main()
     txLine(390,405-x1/5,390,-x1/3);
     x1 = x1 - 4;
         }// rolling
+
+
+
     if (time >= 251 and time <= 300) {
      txLine(110,150,400,400);
      txLine(400,150,110,400);
@@ -141,6 +186,9 @@ int main()
      txLine(450,400,700,150);
      sub("20");
     }//chislo 20
+
+
+
     if (time >= 301 and time <= 450) {
             fon_pesh();
              txSetColor (RGB(255,0,0),2);
@@ -153,12 +201,16 @@ int main()
     y1 = y1 - 1;
     sub("+20_mana");
     }//mech podnit
+
+
         if (time >= 451 and time <= 453) {
     x1 = 0;
     x2 = 0;
     y1 = 0;
     y2 = 0;
-    }
+    }//obnulenie
+
+
     if (time >= 454 and time <= 600) {
         fon_pesh();
     txSetColor (RGB(250,200,0),2);
@@ -171,6 +223,11 @@ int main()
     txLine(225 + x1 * 0.89,340,240 + x1 * 0.89,340);
     x1 = x1 + 1;
     }//chel vs chel
+
+
+
+
+
     if (time >= 601 and time <= 650)
         {
         txLine(360,100,360,600);
@@ -179,11 +236,18 @@ int main()
     txLine(390,405-x1/5,390,-x1/3);
     x1 = x1 - 4;
         }// rolling
+
+
+
+
     if (time >= 651 and time <= 700) {
      txLine(310,150,600,400);
      txLine(600,150,310,400);
      sub("10");
     }//chislo 10
+
+
+
     if (time >= 701 and time <= 750) {
         fon_pesh();
     txSetColor (RGB(255,0,0),2);
@@ -197,11 +261,19 @@ int main()
     txRectangle(0,400,800,600);
     y1 = y1 + 1;
     }//mech opushen
+
+
+
+
         if (time >= 751 and time <= 753) {
     x1 = 0;
     y1 = 0;
     y2 = 0 ;
-        }
+        }//obnulenie
+
+
+
+
     if (time >= 754 and time <= 800)
         {
             txSetColor (RGB(250,200,0),2);
@@ -212,6 +284,11 @@ int main()
     txLine(390,405-x1/5,390,-x1/3);
     x1 = x1 - 4;
         }// rolling
+
+
+
+
+
     if (time >= 801 and time <= 850) {
             txSetColor (RGB(250,200,0),2);
     txSetFillColor (RGB(0,0,0));
@@ -222,14 +299,23 @@ int main()
      sub("20");
     }//chislo 20
 
+
+
+
+
     if (time >= 851 and time <= 900) {
             txSetColor (RGB(250,200,0),2);
     txSetFillColor (RGB(0,0,0));
             txLine(0,400,400,400);
     txLine(400,400,600,400 - x2);
     x2 = x2 + 2;
-
     } // ulibka
+
+
+
+
+
+    //smena
     if (time >= 901 and time <= 903){
             fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -315,6 +401,12 @@ int main()
     y2 = 200;
     sub("intelect_20_is_winner");
     }
+
+    //smenaconec
+
+
+
+
     if (time >= 1001 and time <= 1300)
         {
             fon_pesh();\
@@ -326,7 +418,10 @@ int main()
         txTextOut (10,210,"magic does not work. But with a lot of intelligence and a small amount of ");
         txTextOut (10,290,"mana, magic works");
         txTextOut (10,370,"by misha kocheulov");
-        }
+        }//conecc
+
+
+
      if (time >= 1301 and time <= 1302){
         time = -250;
         x1 = 0;
@@ -337,7 +432,7 @@ int main()
     txSleep(30);
 
 
-    }
+    }//vozvrat
     return 0;
     }
 
