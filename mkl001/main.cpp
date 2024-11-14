@@ -47,7 +47,40 @@ void fon_pesh()
 }
 
 
+void otrglazz()
+{
+        txLine(90,300,270,200);
+        txLine(270,200,500,190);
+        txLine(500,190,700,280);
+        txLine(700,280,670,310);
+        txLine(670,310,310,360);
+        txLine(310,360,90,300);
+        txSetColor (RGB(255,0,0),2);
+        txSetFillColor (RGB(250,0,0));
+        txCircle(380,270,80);
+        txSetColor (RGB(255,0,0),2);
+        txSetFillColor (RGB(0,0,0));
+        txEllipse(370,195,390,340);
+}
 
+
+void otyglazz()
+{
+    txSetColor (RGB(255,200,0),2);
+        txSetFillColor (RGB(0,0,0));
+        txLine(90,300,270,200);
+        txLine(270,200,500,190);
+        txLine(500,190,700,280);
+        txLine(700,280,670,310);
+        txLine(670,310,310,360);
+        txLine(310,360,90,300);
+        txSetColor (RGB(255,200,0),2);
+        txSetFillColor (RGB(250,200,0));
+        txCircle(380,270,80);
+        txSetColor (RGB(255,200,0),2);
+        txSetFillColor (RGB(0,0,0));
+        txEllipse(370,195,390,340);
+}
 
 void sub(const char* subtitres)
 {
@@ -78,7 +111,7 @@ int main()
 
     if (time >= -320 and time <= -251){
         txSelectFont("Comic Sans MS", 110);
-         txTextOut (100,250,"'Fight in cave'");
+         txTextOut (100,250,"'бой в пещере'");
 
     }//nazvanie
 
@@ -92,18 +125,7 @@ int main()
 
 
     if (time >= -199 and time <= -150){
-        txLine(90,300,270,200);
-        txLine(270,200,500,190);
-        txLine(500,190,700,280);
-        txLine(700,280,670,310);
-        txLine(670,310,310,360);
-        txLine(310,360,90,300);
-        txSetColor (RGB(255,0,0),2);
-        txSetFillColor (RGB(250,0,0));
-        txCircle(380,270,80);
-        txSetColor (RGB(255,0,0),2);
-        txSetFillColor (RGB(0,0,0));
-        txEllipse(370,195,390,340);
+        otrglazz();
     }//otglazzred
 
 
@@ -117,20 +139,7 @@ int main()
 
 
     if (time >= -99 and time <= -50){
-        txSetColor (RGB(255,200,0),2);
-        txSetFillColor (RGB(0,0,0));
-        txLine(90,300,270,200);
-        txLine(270,200,500,190);
-        txLine(500,190,700,280);
-        txLine(700,280,670,310);
-        txLine(670,310,310,360);
-        txLine(310,360,90,300);
-        txSetColor (RGB(255,200,0),2);
-        txSetFillColor (RGB(250,200,0));
-        txCircle(380,270,80);
-        txSetColor (RGB(255,200,0),2);
-        txSetFillColor (RGB(0,0,0));
-        txEllipse(370,195,390,340);
+        otyglazz();
     }//otglazzyel
 
 
@@ -143,7 +152,7 @@ int main()
         menb(350 + x0 , 200);
         txSetColor (RGB(255,200,0),2);
     txSetFillColor (RGB(255,200,0));
-        menb(450 - x0 , 200);
+        menb(450 - x0 , 210);
         x0 = x0 + 1;
         sub("intelligence_20_vs_lake_20");
         }//vs_vs
@@ -215,7 +224,7 @@ int main()
         fon_pesh();
     txSetColor (RGB(250,200,0),2);
     txSetFillColor (RGB(250,200,0));
-    menb(400 - x1,200);
+    menb(400 - x1,190);
     txSetColor (RGB(255,0,0),2);
     txSetFillColor (RGB(255,0,0));
     menb(200 + x1,200);
@@ -315,7 +324,9 @@ int main()
 
 
 
-    //smena
+    //////////////////////////////////////////////////////////////////////////smena
+    //////////////////////////////////////////////////////////////////////////smena
+    //////////////////////////////////////////////////////////////////////////smena
     if (time >= 901 and time <= 903){
             fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -327,7 +338,7 @@ int main()
     txLine(225,350,300,180);
     txLine(225,340,240,340);
     y2 = 200;
-    }
+    }//smena
      if (time >= 904 and time <= 907){
          fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -339,7 +350,7 @@ int main()
     txLine(225,350,300,180);
     txLine(225,340,240,340);
     y2 = 0;
-    }
+    }//smena
      if (time >= 908 and time <= 910){
          fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -351,7 +362,7 @@ int main()
     txLine(225,350,300,180);
     txLine(225,340,240,340);
     y2 = 200;
-    }
+    }//smena
      if (time >= 911 and time <= 913){
          fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -363,7 +374,7 @@ int main()
     txLine(225,350,300,180);
     txLine(225,340,240,340);
     y2 = 0;
-    }
+    }//smena
      if (time >= 914 and time <= 923){
          fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -375,7 +386,7 @@ int main()
     txLine(225,350,300,180);
     txLine(225,340,240,340);
     y2 = 200;
-    }
+    }//smena
          if (time >= 924 and time <= 950){
              fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -387,7 +398,7 @@ int main()
     txLine(225,340,240,340);
     menb(200 + y2,200);
     y2 = 0;
-    }
+    }//smena
           if (time >= 924 and time <= 1000){
               fon_pesh();
      txSetColor (RGB(250,200,0),2);
@@ -400,11 +411,11 @@ int main()
     menb(200 + y2,200);
     y2 = 200;
     sub("intelect_20_is_winner");
-    }
+    }//smena
 
-    //smenaconec
-
-
+    /////////////////////////////////////////////////////////////////////////smenaconec
+   /////////////////////////////////////////////////////////////////////////smenaconec
+   /////////////////////////////////////////////////////////////////////////smenaconec
 
 
     if (time >= 1001 and time <= 1300)
@@ -413,10 +424,10 @@ int main()
                 txSetColor (RGB(0,0,0),5);
     txSetFillColor (RGB(0,0,0));
         txSelectFont("Comic Sans MS", 30);
-        txTextOut (10,50,"explanation :");
-        txTextOut (10,130,"In N.R.I., with a large amount of mana and a small amount of intelligence,");
-        txTextOut (10,210,"magic does not work. But with a lot of intelligence and a small amount of ");
-        txTextOut (10,290,"mana, magic works");
+        txTextOut (10,50,"пояснение:");
+        txTextOut (10,130,"В нри. при большом количестве маны и малом количестве интеллекта");
+        txTextOut (10,210," магия не работает.. Но при большом количестве интеллекта и малом количестве");
+        txTextOut (10,290,"маны магия работает");
         txTextOut (10,370,"by misha kocheulov");
         }//conecc
 
