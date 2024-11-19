@@ -26,30 +26,34 @@
 
 int main()
     {
-    txCreateWindow (800, 600);
 int running = 1;
 int x = 400 ;
 int y = 300 ;
-int r = 40 ;
-int speedx  = 10;
-int speedy  = 10;
+int r = 10 ;
+int speed = 3;
+int speedx  = speed;
+int speedy  = speed;
+int h = 800;
+int w = 50;
+int zamedlenie = 0;
+txCreateWindow (h, w);
 while (running >= 0)
     {
-     txSetColor (RGB(255,0,0),2);//fon
+     txSetColor (RGB(255,0,0),80);//fon
     txSetFillColor (RGB(0,0,0));//fon
     txRectangle (0, 0, 800, 600);//fon
     txCircle(x,y,r);
-    if (x <= 0 + r or x >= 800 - r)
+    if (x <= 0 + r or x >= h - r)
     {
         speedx = speedx * -1;
     }
-    if (y <= 0 + r or y >= 600 - r )
+    if (y <= 0 + r or y >= w - r )
     {
         speedy = speedy * -1;
     }
     x = x + speedx;
     y = y + speedy;
-    txSleep(30);
+    txSleep(zamedlenie);
 }
 
     return 0;

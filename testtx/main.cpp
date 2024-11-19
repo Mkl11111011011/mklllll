@@ -2,23 +2,23 @@
 //! @file       Main.cpp
 //{=======================================================================
 //!
-//! @brief      <Заголовок>\n
-//! @brief      <Подзаголовок>
+//! @brief      <шар>\n
+//! @brief      <нет>
 //!
 //! @version    [Version 0.01 alpha, build 1]
-//! @author     Copyright (C) <Автор>, <Год> (<Имя> <Почта>)
-//! @date       <Дата>
+//! @author     Copyright (C) <Миша>, <20241119>
+//! @date       <20241119>
 //!
 //! @par        Протестировано
-//!           - (TODO: список платформ)
 //!
-//! @todo     - (TODO: список ближайших планов по этому файлу)
 //!
-//! @bug      - (TODO: список найденных ошибок в этом файле)
+//! @todo     -нет
+//!
+//! @bug      -нет
 //!
 //! @par        История изменений файла
 //!           - Версия 0.01 Alpha
-//!             - Только что созданный файл
+//!
 //!
 //}=======================================================================
 
@@ -26,30 +26,37 @@
 
 int main()
     {
-    txCreateWindow (800, 600);
+        ///////////////////////////////////////////////osnovnie
+int h = 800;//shirina
+int w = 200;//visota
+int zamedlenie = 0;//scorasthoda
+int speed = 3;//scorostshaga
+int r = 10 ;//radius
+//////////////////////////////////////////////////////zavisimie
 int running = 1;
-int x = 400 ;
-int y = 300 ;
-int r = 40 ;
-int speedx  = 10;
-int speedy  = 10;
+int x = h / 2 ;
+int y = w / 2 ;
+int speedx  = speed;
+int speedy  = speed;
+
+txCreateWindow (h, w);//ocno
 while (running >= 0)
     {
-     txSetColor (RGB(255,0,0),2);//fon
+     txSetColor (RGB(255,0,0),30);//fon
     txSetFillColor (RGB(0,0,0));//fon
-    txRectangle (0, 0, 800, 600);//fon
-    txCircle(x,y,r);
-    if (x <= 0 + r or x >= 800 - r)
+    txRectangle (0, 0, h, w);//fon
+    txCircle(x,y,r);//shar
+    if (x <= 0 + r or x >= h - r)//boca
     {
-        speedx = speedx * -1;
+        speedx = speedx * -1;//invertacia
     }
-    if (y <= 0 + r or y >= 600 - r )
+    if (y <= 0 + r or y >= w - r )//verhogranich
     {
-        speedy = speedy * -1;
+        speedy = speedy * -1;//invertacia
     }
-    x = x + speedx;
-    y = y + speedy;
-    txSleep(30);
+    x = x + speedx;//shag
+    y = y + speedy;//shag
+    txSleep(zamedlenie);//zamedlenie
 }
 
     return 0;
